@@ -1,0 +1,68 @@
+##########################################################
+###Comando do git para clonar o repositório  locais modificados:
+##########################################################
+## primeiro ac
+
+Para criar cópias de trabalho dos pacotes:
+
+1- instale o git no seu computador 
+OSX (http://code.google.com/p/git-osx-installer/downloads/list?can=3)
+Linux (http://git-scm.com/book/pt-br/Primeiros-passos-Instalando-Git)
+
+2- Abra uma conta no GitHub
+
+3- Logue no site do GitHub e vá ao repositório do wikiflora: 
+https://github.com/adardo/wikiflora/
+
+Ou digite 'wikiflora' no search de repositório  git
+ 
+4- Clique em "fork" para criar uma cópia de trabalho (branch) do projeto  na sua 
+área do GitHub
+
+5- Em seu computador no  diretorio onde quer criar a copia de trabalho digite 
+para fazer a copia local:
+
+git clone https://github.com/[seu usuário git]/wikiflora.git
+
+Para fazer modificacoes em sua copia local:
+
+7 - Entre no diretorio criado (cd wikiflora) e crie um apelido para o endereco 
+da versao estável do pacote (o padrão é upstream):
+
+git remote add upstream https://github.com/adalardo/wikiflora.git
+
+8 - Antes de começar a trabalhar na sua copia sempre atualize-a com a copia do 
+repositorio estável. De dentro do diretorio local de trabalho (wikiflora) 
+digite:
+
+git fetch upstream 
+
+# baixa as  modificacoes sem alterar seus arquivos locais
+
+git merge upstream/origin
+
+# incorpora modificacoes
+
+Faça as modificações nos arquivos em sua máquina. Quando terminar Submeta-as no 
+seu diretorio local:
+
+9- Do dirtório de sua cópia local de trabalho digite (após criar os arquivos ou 
+modificá-los):
+
+git add ./ # adiciona todas as mudanças à lista do commit local
+git commit -m "mensagem" #faz commit local
+git push origin   # envia as mudanças do commit para a sua cópia de trabalho no 
+GitHub
+
+Até aqui vc atualizou a sua versão de trabalho no GitHub. 
+Quando terminamos uma tarefa e queremos incorporá-la na versao estável 
+usuários comuns devem
+solicitar. Para isso devem ir ao respositório deles  no site do GitHub e clique 
+em "pull-request". Indicando que quer incorporar as modificaçẽs ao respositorio 
+adalardo/wikiflora. A solicitação é enviada aos administradores da versão 
+estável (Beto e Alê), que verificamos antes de aceitar. No caso do administrador 
+acho que vão sem precisar do 'pull-request'
+
+Com isso cada um mantêm em sua maquina local e no GitHub sua versão de trabalho, 
+sem afetar a versao estável.
+
